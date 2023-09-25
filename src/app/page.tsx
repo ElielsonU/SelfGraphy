@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Desciption = styled.div`
     width: 481px;
-    height: 390px;
+    height: 533px;
     display: flex;
     flex-direction: column;
     
@@ -22,10 +22,21 @@ const Botao = styled.button`
     background-color: #5BC0BE;
     border: none;
     border-radius: 12.07px;
-    color: black;
+    color: white;
     font-size: 3.5rem;
     margin: 0;
     padding: 0;
+    font-weight: bold;
+`;
+
+const Text = styled.h2`
+    color: #0B132B;
+    font-size: 2.6rem;
+`;
+
+const Link = styled.h2`
+    font-size: 2.6rem;
+    margin: 30px 0px 30px 0px;
 `;
 
 export default function Home() {
@@ -36,9 +47,9 @@ export default function Home() {
       <Main>
         <>
           <Desciption>
-            <h2>Create your own autobiography with
-our services. Here, without any knowledge about how to make a biography, you can have a professional work, made with AIs customized to you. The best part is: you can do all of this just speaking, we implemented a way to help people that have certain deficiencies creating your autobiography. An addiotional is: we can restore your old photos here and place it on your autobiography automatic, giving more originality to your project</h2>
-            <h2><a href="*">How to use it?</a></h2>
+            <Text>Create your own autobiography with
+our services. Here, without any knowledge about how to make a biography, you can have a professional work, made with AIs customized to you. The best part is: you can do all of this just speaking, we implemented a way to help people that have certain deficiencies creating your autobiography. An addiotional is: we can restore your old photos here and place it on your autobiography automatic, giving more originality to your project</Text>
+            <Link><a href="*">How to use it?</a></Link>
             <Botao>Start Now!</Botao>
           </Desciption>
           <img  src="/imgs/mão.png"/>
