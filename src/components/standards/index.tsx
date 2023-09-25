@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { Button } from "../models/Button";
 
 interface HeaderProps {
-  type: "light" | "dark";
+  type: "light" | "dark" | "wellcome";
 }
 
 export const Header = ({ type }: HeaderProps) => {
-
+  const theme = useTheme();
 
   return (
     <StyledHeader type={type}>
@@ -20,8 +20,16 @@ export const Header = ({ type }: HeaderProps) => {
         </div>
 
         <div className="header-buttons">
-            <Button fontSize="2.3rem">Sign Up</Button>
-            <Button>Login</Button>
+          {type == "wellcome" 
+          ?<h2 className="wellcome">Wellcome</h2>
+          : <>
+            <Button fontSize="2.3rem" color={theme.deepblue}>
+              Sign Up
+            </Button>
+            <Button fontSize="2.3rem" color={theme.cyan} bgcolor={theme.deepblue}>
+              Login
+            </Button>
+          </>}
         </div>
       </section>
     </StyledHeader>
@@ -50,10 +58,10 @@ const StyledHeader = styled.header<HeaderProps>`
     > h1 {
       font-size: 3.2rem;
       color: ${({ theme, type }) =>
-        type == "light" ? theme.white : theme.cyan};
+        type == "dark" ? theme.cyan : theme.white};
       strong {
         color: ${({ theme, type }) =>
-          type == "light" ? theme.deepblue : theme.white};
+          type == "dark" ? theme.white : theme.deepblue};
       }
     }
   }
@@ -62,5 +70,10 @@ const StyledHeader = styled.header<HeaderProps>`
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  .wellcome {
+    color: ${({ theme }) => theme.white};
+    font-size: 3.2rem;
   }
 `;

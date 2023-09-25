@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <> 
             <ThemeProvider theme={defaultTheme}>
-                <Header type="light"/>
+                <Header type="wellcome"/>
                 <GlobalStyle />
             </ThemeProvider>
         </>

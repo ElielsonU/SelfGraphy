@@ -11,7 +11,7 @@ interface ButtonProps extends PropsWithChildren {
 
 export const Button = styled.button<ButtonProps>`
     color: ${({color}) => color};
-    background-color: ${({bgcolor}) => bgcolor};
+    background-color: ${({bgcolor, theme}) => bgcolor || theme.white};
     width: ${({width}) => width};
     height: ${({height}) => height};
     font-size: ${({fontSize}) => fontSize || "2.4rem"};
