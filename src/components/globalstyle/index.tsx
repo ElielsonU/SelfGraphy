@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 10px;
     }
 
+    body {
+        color: #0B132B;
+    }
+
     * {
         box-sizing: border-box;
         margin: 0;
