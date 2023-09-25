@@ -1,11 +1,16 @@
 "use client";
-import { GlobalStyle } from "@/components/globalstyle"
+import { GlobalStyle } from "@/components/globalstyle";
+import { Header } from "@/components/standards";
+import { defaultTheme } from "@/styles/theme";
+import { ThemeProvider } from "styled-components";
 
 export default function Page() {
-    return (
-        <> 
-            <GlobalStyle />
-            <h1>OPA!</h1>
-        </>
-    )
+  return (
+    <>
+      <ThemeProvider theme={defaultTheme}>
+        <Header type="wellcome" />
+        <GlobalStyle />
+      </ThemeProvider>
+    </>
+  );
 }
