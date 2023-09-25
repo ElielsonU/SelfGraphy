@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import favicon from "/public/favicon.ico";
-import { ThemeProvider } from "styled-components";
 
 const roboto400 = Roboto({ subsets: ["latin"], weight: "400" });
 const roboto700 = Roboto({ subsets: ["latin"], weight: "700" });
