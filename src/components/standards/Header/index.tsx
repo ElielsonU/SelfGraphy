@@ -104,6 +104,7 @@ const StyledHeader = styled.header<HeaderProps>`
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 
     > h1 {
       font-size: 3rem;

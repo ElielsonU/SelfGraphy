@@ -26,8 +26,8 @@ export default function Home() {
               here and place it on your autobiography automatic, giving more
               originality to your project
             </Text>
-            <StyledLink href="#">How to use it?</StyledLink>
-            <StartNowButton>Start Now!</StartNowButton>
+            <StyledLink href="/about">How to use it?</StyledLink>
+            <StartNowButton onClick={() => router.push("/join")}>Start Now!</StartNowButton>
           </Description>
           <img src="/imgs/mão.png" className="palm" alt="palm" />
         </MainDivisor>
