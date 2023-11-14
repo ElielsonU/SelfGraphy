@@ -4,7 +4,9 @@ export const defaultTheme = {
     deepblue: "#0B132B",
     white: "#FAFAFA",
     linkblue: "#0904FF",
-    gray: "#303036"
+    gray: "#303036",
+    slateblue: "#3A506B",
+    blue: "#1C2541"
 }
 
 export type ThemePattern = typeof defaultTheme

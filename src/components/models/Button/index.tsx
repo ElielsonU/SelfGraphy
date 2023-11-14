@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface ButtonProps extends PropsWithChildren {
     color?: string;
-    bgcolor?: string;
+    $backgroundcolor?: string;
     width?: string;
     height?: string;
     fontSize?: string;
@@ -11,7 +11,7 @@ interface ButtonProps extends PropsWithChildren {
 
 export const Button = styled.button<ButtonProps>`
     color: ${({color}) => color};
-    background-color: ${({bgcolor, theme}) => bgcolor || theme.white};
+    background-color: ${({$backgroundcolor, theme}) => $backgroundcolor || theme.white};
     width: ${({width}) => width};
     height: ${({height}) => height};
     font-size: ${({fontSize}) => fontSize || "2.4rem"};
@@ -22,9 +22,11 @@ export const Button = styled.button<ButtonProps>`
     padding: 5px 15px;
     font-weight: 700;
     border-radius: 12px;
-    transition: 200ms filter ease-in;
-
-    :hover {
-        filter: brightness(90%);
+    transition: 200ms all ease-in;
+    cursor: pointer;
+    
+    &:hover {
+        filter: saturate(200%);
+        text-shadow: 0px 0px 2px;  background-color: cyan;
     }
 `
