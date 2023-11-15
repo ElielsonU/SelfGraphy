@@ -21,7 +21,7 @@ export default function Page() {
         <InputsArea>
           <aside />
 
-          <textarea placeholder="Start here..."></textarea>
+          <textarea placeholder="Comece aqui..."></textarea>
         </InputsArea>
         <FooterActions>
           <Image

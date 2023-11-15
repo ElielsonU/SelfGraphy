@@ -17,17 +17,16 @@ export default function Home() {
         <MainDivisor>
           <Description>
             <Text>
-              Create your own autobiography with our services. Here, without any
-              knowledge about how to make a biography, you can have a
-              professional work, made with AIs customized to you. The best part
-              is: you can do all of this just speaking, we implemented a way to
-              help people that have certain deficiencies creating your
-              autobiography. An addiotional is: we can restore your old photos
-              here and place it on your autobiography automatic, giving more
-              originality to your project
+            Crie sua própria autobiografia com nossos serviços. Aqui, sem qualquer
+              conhecimento sobre como fazer uma biografia, você pode ter um
+              trabalho profissional, feito com IAs customizadas para você. Além de que você pode fazer tudo isso apenas falando! Implementamos uma forma de
+              ajudar pessoas que têm certas deficiências a criar sua
+              autobiografia. Por fim, podemos restaurar fotos antigas
+              aqui e adicioná-las em sua autobiografia automaticamente, dando mais
+              originalidade ao seu projeto.
             </Text>
-            <StyledLink href="/about">How to use it?</StyledLink>
-            <StartNowButton onClick={() => router.push("/join")}>Start Now!</StartNowButton>
+            <StyledLink href="/about">Como usar?</StyledLink>
+            <StartNowButton onClick={() => router.push("/join")}>Comece Agora!</StartNowButton>
           </Description>
           <img src="/imgs/mão.png" className="palm" alt="palm" />
         </MainDivisor>

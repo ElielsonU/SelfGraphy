@@ -10,7 +10,7 @@ interface JoinFormProps {
 }
 
 export const JoinForm = ({ type }: JoinFormProps) => {
-  const title = type == "signup" ? "Sign Up" : "Login";
+  const title = type == "signup" ? "Cadastre-se" : "Entrar";
   const theme = useTheme();
 
   return (
@@ -20,7 +20,7 @@ export const JoinForm = ({ type }: JoinFormProps) => {
       {type == "signup" ? (
         <Form className="signup" action="/home">
           <JoinInput>
-            Username
+            Nome do usuário
             <input type="text" required />
           </JoinInput>
 
@@ -30,12 +30,12 @@ export const JoinForm = ({ type }: JoinFormProps) => {
           </JoinInput>
 
           <JoinInput>
-            Password
+            Senha
             <input type="password" required />
           </JoinInput>
 
           <JoinInput>
-            Repeat your password
+            Confirme sua senha
             <input type="password" required />
           </JoinInput>
 
@@ -45,7 +45,7 @@ export const JoinForm = ({ type }: JoinFormProps) => {
             color={theme.white}
             fontSize="3rem"
           >
-            Register
+            Registrar
           </Button>
 
           <SocialJoin>
@@ -73,7 +73,7 @@ export const JoinForm = ({ type }: JoinFormProps) => {
               Facebook
             </Button>
             <span className="suggestion">
-              I already have an account:{" "}
+              Eu já tenho uma conta:{" "}
               <Link href="/join?type=login">Login</Link>
             </span>
           </SocialJoin>
@@ -86,7 +86,7 @@ export const JoinForm = ({ type }: JoinFormProps) => {
           </JoinInput>
 
           <JoinInput>
-            Password
+            Senha
             <input type="password" required />
           </JoinInput>
 
@@ -96,7 +96,7 @@ export const JoinForm = ({ type }: JoinFormProps) => {
             color={theme.cyan}
             fontSize="3rem"
           >
-            Login
+            Entrar
           </Button>
 
           <SocialJoin>
@@ -124,8 +124,8 @@ export const JoinForm = ({ type }: JoinFormProps) => {
               Facebook
             </Button>
             <span className="suggestion">
-              I don't have an account:{" "}
-              <Link href="/join?type=signup">Sign Up</Link>
+              Ainda não tenho uma conta:{" "}
+              <Link href="/join?type=signup">Registre-se</Link>
             </span>
           </SocialJoin>
         </Form>

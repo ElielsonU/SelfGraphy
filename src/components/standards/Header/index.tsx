@@ -33,7 +33,7 @@ export const Header = ({ type }: HeaderProps) => {
         </Link>
 
         <div className="header-buttons">
-          {type == "wellcome" && <h2 className="wellcome">Wellcome</h2>}
+          {type == "wellcome" && <h2 className="wellcome">Bem vindo!</h2>}
           {type == "light" && (
             <>
               <Button
@@ -41,7 +41,7 @@ export const Header = ({ type }: HeaderProps) => {
                 color={theme.deepblue}
                 onClick={() => router.push("/join?type=signup")}
               >
-                Sign Up
+                Registrar-se
               </Button>
               <Button
                 fontSize="2.3rem"
@@ -49,7 +49,7 @@ export const Header = ({ type }: HeaderProps) => {
                 $backgroundcolor={theme.deepblue}
                 onClick={() => router.push("/join?type=signup")}
               >
-                Login
+                Entrar
               </Button>
             </>
           )}

@@ -24,11 +24,11 @@ export default function Page() {
           />
         </ProfilePicture>
         <InfoSection>
-          <span className="username">Username</span>
+          <span className="username">Nome do usuário</span>
           <UniqueInfos>
             <span className="user-id">#000000000</span>
             <Button className="share-profile">
-              Share
+              Compartilhar
               <Image
                 src={ShareIcon.src}
                 alt="share icon"
@@ -39,14 +39,14 @@ export default function Page() {
           </UniqueInfos>
           <CreditsRow>
             <span>
-              Credits: <strong className="value">10</strong>
+              Créditos: <strong className="value">10</strong>
             </span>
             <span>
-              Used credits: <strong className="value">20</strong>
+              Créditos gastos: <strong className="value">20</strong>
             </span>
           </CreditsRow>
           <GallerySection>
-            <span className="title">Gallery</span>
+            <span className="title">Galeria</span>
             <div className="item"/>
             <div className="item"/>
             <div className="item"/>

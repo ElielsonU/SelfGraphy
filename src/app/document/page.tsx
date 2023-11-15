@@ -21,7 +21,7 @@ export default function Page() {
       <Main>
         <MainInfo>
           <h2>
-            Your document has been <strong>generated!</strong>
+            Sua autobiografia foi <strong>Criada!</strong>
           </h2>
           <ButtonsZone>
             <Button>
@@ -31,7 +31,7 @@ export default function Page() {
                 width={30}
                 height={30}
               />
-              Download
+              Baixar
             </Button>
             <Button>
               <Image
@@ -40,10 +40,10 @@ export default function Page() {
                 width={30}
                 height={30}
               />
-              Save to Gallery
+              Salvar na galeria
             </Button>
             <Button>
-              Create another document
+              Criar outra autobiografia
               <Image
                 src={ReturnIcon.src}
                 alt="files icon"
@@ -54,7 +54,7 @@ export default function Page() {
           </ButtonsZone>
         </MainInfo>
         <DocumentPreview>
-          <Button className="load-preview">Load Preview</Button>
+          <Button className="load-preview">Carregar prévia</Button>
 
           <Image
             className="download-icon"
@@ -92,13 +92,14 @@ const MainInfo = styled.section`
     color: ${({ theme }) => theme.white};
 
     > strong {
+      display: block;
       color: ${({ theme }) => theme.cyan};
     }
   }
 `;
 
 const DocumentPreview = styled.section`
-  width: 570px;
+  width: 470px;
   height: 100%;
   border-radius: 15px;
   background-color: ${({ theme }) => theme.black};

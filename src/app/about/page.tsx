@@ -15,23 +15,12 @@ export default function Page() {
       <Header type="light" />
       <Main>
         <Description>
-          <h2>How to use our site?</h2>
+          <h2>Como utilizar nosso site?</h2>
           <p>
-            It's very simple to use our services. You just need to speak or
-            write about your life! And you can use a model to create your
-            autobiography. In this, you'll have a simple pattern for the
-            document, like: start describing about your childhood ( your first
-            teacher, your parents names, your friends, your dreams, etc ), next
-            about your adolescence ( your first relationship, your perspectives,
-            some disagreement, etc ), and finally, about your life actually (
-            what you do, what is your dreams, do you reached your dreams? ). We
-            have a button to add images to your biography too, you can use like:
-            “This is my mother” and the photo, or you can contextualize an Now
-            that you know how to use our site, what about login and get a model
-            for your first autobiography?
+          Utilizar nossos serviços é muito simples. Basta falar ou escrever sobre a sua vida! Você pode usar um modelo para criar a sua autobiografia, seguindo um padrão simples para o documento. Comece descrevendo a sua infância (seu primeiro professor, os nomes dos seus pais, seus amigos, seus sonhos, etc.), em seguida, aborde a sua adolescência (seu primeiro relacionamento, suas perspectivas, desentendimentos, etc.), e por fim, fale sobre a sua vida atualmente (o que você faz, quais são seus sonhos, se você os alcançou ou não). Temos um botão para adicionar imagens à sua biografia também. Você pode utilizar algo como: 'Esta é minha mãe' e a foto correspondente, ou contextualizar uma situação. Agora que você entende como usar nosso site, que tal fazer login e obter um modelo para sua primeira autobiografia?
           </p>
           <Button
-            width="100%"
+            width="480px"
             height="50px"
             color="#1C2541"
             $backgroundcolor="#5BC0BE"
@@ -57,7 +46,6 @@ const Description = styled.section`
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
   align-items: center;
 
@@ -67,8 +55,12 @@ const Description = styled.section`
   }
 
   > p {
+    margin: 10px;
     font-size: 1.8rem;
     color: ${({ theme }) => theme.white};
+    display: inline-block;
+    width: 480px;
+    flex: 1;
   }
 `;
 
