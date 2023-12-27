@@ -30,6 +30,7 @@ const Main = styled.main`
 
   > img {
     object-fit: contain;
+    max-width: 100%;
   }
 
   > h1 {

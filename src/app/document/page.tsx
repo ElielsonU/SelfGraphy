@@ -63,6 +63,36 @@ export default function Page() {
             width={40}
             height={40}
           />
+
+          <section className="buttons-zone">
+            <Button>
+              <Image
+                src={DownloadIcon.src}
+                alt="files icon"
+                width={30}
+                height={30}
+              />
+              Baixar
+            </Button>
+            <Button>
+              Retornar
+              <Image
+                src={ReturnIcon.src}
+                alt="files icon"
+                width={30}
+                height={30}
+              />
+            </Button>
+            <Button className="gallery">
+              <Image
+                src={SaveIcon.src}
+                alt="files icon"
+                width={30}
+                height={30}
+              />
+              Salvar na galeria
+            </Button>
+          </section>
         </DocumentPreview>
       </Main>
     </ThemeProvider>
@@ -78,6 +108,14 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 725px) {
+    padding: 53px 30px;
+  }
 `;
 
 const MainInfo = styled.section`
@@ -95,6 +133,10 @@ const MainInfo = styled.section`
       display: block;
       color: ${({ theme }) => theme.cyan};
     }
+  }
+
+  @media (max-width: 900px) {
+    display: none;
   }
 `;
 
@@ -121,6 +163,31 @@ const DocumentPreview = styled.section`
     position: absolute;
     right: 10px;
     top: 20px;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  .buttons-zone {
+    display: none;
+    position: absolute;
+    align-items: start;
+    gap: 10px;
+    flex-direction: column;
+    bottom: 20px;
+    left: 20px;
+
+    .gallery {
+      > img {
+        filter: brightness(0%);
+      }
+    }
+
+    @media (max-width: 900px) {
+      display: flex;
+      position: absolute;
+    }
   }
 `;
 

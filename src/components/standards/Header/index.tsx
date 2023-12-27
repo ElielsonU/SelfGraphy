@@ -114,6 +114,9 @@ const StyledHeader = styled.header<HeaderProps>`
         color: ${({ theme, type }) =>
           type == "dark" ? theme.white : theme.deepblue};
       }
+      @media (max-width: 725px) {
+        display: none;
+      }
     }
   }
 
@@ -128,6 +131,10 @@ const StyledHeader = styled.header<HeaderProps>`
     font-size: 3.2rem;
     text-shadow: 4px 4px 4px ${({ theme }) => theme.black}40;
   }
+
+  @media (max-width: 725px) {
+    padding: 10px 30px;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -135,4 +142,11 @@ const IconsContainer = styled.div`
   align-items: center;
   gap: 25px;
   height: 35px;
+
+  > img {
+    @media (max-width: 725px) {
+      height: 95px;
+      aspect-ratio: 1 / 1;
+    }
+  }
 `;

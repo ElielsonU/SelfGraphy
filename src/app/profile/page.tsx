@@ -65,6 +65,11 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 975px) {
+    flex-direction: column;
+    padding: 10px 30px;
+  }
 `;
 
 const ProfilePicture = styled.section`
@@ -79,10 +84,14 @@ const ProfilePicture = styled.section`
   > img {
     object-fit: contain;
   }
+
+  @media (max-width: 975px) {
+    height: 400px;
+    width: 400px;
+}
 `;
 
 const InfoSection = styled.section`
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -94,6 +103,10 @@ const InfoSection = styled.section`
   > .username {
     font-size: 2.8rem;
     color: ${({ theme }) => theme.white};
+  }
+
+  @media (max-width: 975px)  {
+    max-width: 100%;
   }
 `;
 
@@ -118,6 +131,10 @@ const UniqueInfos = styled.div`
     border-radius: 15px;
     gap: 5px;
     color: ${({ theme }) => theme.white};
+  }
+
+  @media (max-width: 975px) {
+    width: calc(100vw - 60px);
   }
 `;
 
@@ -144,6 +161,7 @@ const GallerySection = styled.section`
   padding: 50px 30px;
   gap: 30px;
   position: relative;
+  max-width: 600px;
 
   > .title {
     font-size: 2rem;
@@ -157,5 +175,10 @@ const GallerySection = styled.section`
     width: 100%;
     height: 100%;
     background-color: ${({theme}) => theme.blue};
+  }
+
+  @media (max-width: 975px) {
+    width: 100%;
+    max-width: none;
   }
 `;

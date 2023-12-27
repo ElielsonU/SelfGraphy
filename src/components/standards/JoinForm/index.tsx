@@ -136,6 +136,7 @@ export const JoinForm = ({ type }: JoinFormProps) => {
 
 const FormSection = styled.section`
   width: 50%;
+  min-width: 400px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -143,6 +144,7 @@ const FormSection = styled.section`
   box-sizing: border-box;
   padding: 30px 0;
   gap: 50px;
+  z-index: 1;
 
   .form-title {
     font-size: 3.6rem;
@@ -153,6 +155,11 @@ const FormSection = styled.section`
   &.signup {
     justify-content: space-between;
     gap: 20px;
+  }
+
+  @media (max-width: 800px) {
+    max-width: none;
+    width: 500px;
   }
 `;
 

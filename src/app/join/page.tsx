@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { JoinForm } from "@/components/standards/JoinForm";
 
 export default function Page() {
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
   const formType = searchParams.get("type") as string;
 
   return (
@@ -21,7 +21,7 @@ export default function Page() {
             alt="pen writing digital"
             className="digital-writed"
           />
-          <JoinForm type={formType}/>
+          <JoinForm type={formType} />
         </MainDivisor>
       </Main>
     </ThemeProvider>
@@ -35,10 +35,30 @@ const MainDivisor = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   > .digital-writed {
     max-width: 50%;
     max-height: 100%;
+
+    @media (max-width: 900px) {
+      width: 350px;
+      align-self: flex-start;
+      padding-top: 10px;
+    }
+
+    @media (max-width: 756px) {
+      position: absolute;
+      max-width: none;
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: 900px) {
+    justify-content: center;
   }
 `;
 

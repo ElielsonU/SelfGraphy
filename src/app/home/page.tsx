@@ -11,15 +11,22 @@ import SaveIcon from "/public/icons/SaveIcon.svg";
 import SendIcon from "/public/icons/SendIcon.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Page() {
+  const [showAside, setShowAside] = useState(false)
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <Header type="dark"/>
       <Main>
-        <InputsArea>
-          <aside />
+        <InputsArea showAside={showAside}>
+          <aside>
+            <button onClick={() => {
+              setShowAside(!showAside)
+            }}>{">"}</button>
+          </aside>
 
           <textarea placeholder="Comece aqui..."></textarea>
         </InputsArea>
@@ -81,7 +88,11 @@ const Main = styled.main`
   justify-content: space-between;
 `;
 
-const InputsArea = styled.section`
+interface InputsAreaProps {
+  showAside: boolean;
+}
+
+const InputsArea = styled.section<InputsAreaProps>`
   padding-left: 10px;
   width: 100%;
   height: 500px;
@@ -97,8 +108,22 @@ const InputsArea = styled.section`
 
   > aside {
     background-color: ${({ theme }) => theme.black};
-    width: 300px;
+    max-width: 300px;
     height: 100%;
+    transition: width ease 300ms;
+    position: relative;
+    width: ${({showAside}) => showAside ? "300px" : "10px"};
+
+    button {
+      position: absolute;
+      right: -5px;
+      border-radius: 50%;
+      border: none;
+      background-color: ${({ theme }) => theme.black};
+      color: ${({theme}) => theme.white};
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   > textarea {
@@ -118,6 +143,7 @@ const InputsArea = styled.section`
 
 const FooterActions = styled.footer`
   flex: 1;
+  max-height: 70px;
   padding: 0 20px;
   box-sizing: border-box;
   align-self: stretch;
