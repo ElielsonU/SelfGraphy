@@ -56,11 +56,16 @@ const Description = styled.section`
 
   > p {
     margin: 10px;
+    max-width: 100%;
     font-size: 1.8rem;
     color: ${({ theme }) => theme.white};
     display: inline-block;
     width: 480px;
     flex: 1;
+  }
+
+  @media (max-width: 1070px) {
+    width: 100%;
   }
 `;
 
@@ -72,7 +77,11 @@ const Main = styled.main`
 
   .about-image {
     width: 50%;
-    max-height: 100%;
+    height: 100%;
     object-fit: cover;
+
+    @media (max-width: 1070px) {
+      display: none;
+    }
   }
 `;

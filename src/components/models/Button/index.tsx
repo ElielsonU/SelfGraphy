@@ -24,6 +24,7 @@ export const Button = styled.button<ButtonProps>`
     border-radius: 12px;
     transition: 200ms all ease-in;
     cursor: pointer;
+    max-width: 100%;
     
     &:hover {
         filter: saturate(200%);
