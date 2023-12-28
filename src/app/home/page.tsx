@@ -116,13 +116,14 @@ const InputsArea = styled.section<InputsAreaProps>`
 
     button {
       position: absolute;
+      font-size: 20px;
       right: -5px;
       border-radius: 50%;
       border: none;
       background-color: ${({ theme }) => theme.black};
       color: ${({theme}) => theme.white};
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) rotateZ(${({showAside}) => showAside ? "180deg" : "0deg"});
     }
   }
 
